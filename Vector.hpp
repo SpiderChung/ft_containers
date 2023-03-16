@@ -7,6 +7,7 @@
 
 #include <memory>
 #include "./iter/Iterator.hpp"
+#include "./iter/IteratorRandomAccess.hpp"
 
 namespace ft {
     template <class T, class Allocator = std::allocator<T> >
@@ -20,7 +21,10 @@ namespace ft {
         typedef typename    Allocator::reference        reference;
         typedef typename    Allocator::const_reference  const_reference;
         typedef             std::ptrdiff_t              difference_type;
-        typedef             ft
+        typedef             ft::iterator_traits<>       iterator;
+        typedef                                         const_iterator;
+        typedef                                         reverse_iterator;
+        typedef                                         const_reverse_iterator;
     private:
     };
 }
